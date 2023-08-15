@@ -1,5 +1,5 @@
-1. **You**: Step-by-step tutorial on how to install Laravel 10 using xampp and Ubuntu
-2. **ChatGPT**: Sure! Here's a step-by-step tutorial on how to install Laravel 10 using XAMPP and Ubuntu:
+1. Step-by-step tutorial on how to install Laravel 10 using xampp and Ubuntu
+2. Sure! Here's a step-by-step tutorial on how to install Laravel 10 using XAMPP and Ubuntu:
 
 Step 1: Install XAMPP
 - Download XAMPP for Linux from the Apache Friends website (https://www.apachefriends.org/index.html).
@@ -80,8 +80,8 @@ Step 6: Run Laravel
 That's it! You have successfully installed Laravel 10 using XAMPP and Ubuntu. You can now start building your Laravel application.
 
 
-1. **You**: آموزش قدم به قدم نصب لاراول ۱۰ با استفاده از زمپ در اوبنتو
-2. **ChatGPT**: نصب Laravel 10 با استفاده از ZAMPP در Ubuntu را می توان در چند مرحله جداگانه انجام داد. دقت داشته باشید که ZAMPP یک نرم افزار برای اجرای سرور وب است که شامل Apache، MySQL و PHP است.
+1.  آموزش قدم به قدم نصب لاراول ۱۰ با استفاده از زمپ در اوبنتو
+2. نصب Laravel 10 با استفاده از ZAMPP در Ubuntu را می توان در چند مرحله جداگانه انجام داد. دقت داشته باشید که ZAMPP یک نرم افزار برای اجرای سرور وب است که شامل Apache، MySQL و PHP است.
 
 1. نصب ZAMPP:
    - ابتدا باید ZAMPP را از وبسایت رسمی Apache Friends دریافت کنید.
