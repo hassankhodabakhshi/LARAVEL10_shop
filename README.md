@@ -78,3 +78,52 @@ Step 6: Run Laravel
 - Open your web browser and visit `http://localhost:8000` to see your Laravel application in action.
 
 That's it! You have successfully installed Laravel 10 using XAMPP and Ubuntu. You can now start building your Laravel application.
+
+
+1. **You**: آموزش قدم به قدم نصب لاراول ۱۰ با استفاده از زمپ در اوبنتو
+2. **ChatGPT**: نصب Laravel 10 با استفاده از ZAMPP در Ubuntu را می توان در چند مرحله جداگانه انجام داد. دقت داشته باشید که ZAMPP یک نرم افزار برای اجرای سرور وب است که شامل Apache، MySQL و PHP است.
+
+1. نصب ZAMPP:
+   - ابتدا باید ZAMPP را از وبسایت رسمی Apache Friends دریافت کنید.
+   - فایل دانلود شده را با استفاده از دستور زیر در محل دلخواه خود استخراج کنید:
+     ```
+     tar xvfz xampp-linux-x64-7.4.23-0-installer.run.tar.gz -C /opt
+     ```
+   - سپس به پوشه نصب ZAMPP بروید:
+     ```
+     cd /opt/lampp
+     ```
+   - برای اجرای ZAMPP، دستور زیر را وارد کنید:
+     ```
+     sudo ./xampp start
+     ```
+
+2. نصب Composer:
+   - برای نصب پکیج ها و وابستگی های Laravel، نیاز به نصب Composer داریم.
+   - برای نصب Composer، دستورات زیر را به ترتیب اجرا کنید:
+     ```
+     cd ~
+     curl -sS https://getcomposer.org/installer -o composer-setup.php
+     sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+     ```
+
+3. ساخت پروژه Laravel:
+   - برای ساخت پروژه Laravel جدید، از دستور زیر استفاده می کنیم:
+     ```
+     composer create-project --prefer-dist laravel/laravel project-name
+     ```
+     در این دستور، `project-name` نام پروژه مورد نظر شما است. می توانید هر نامی را برای پروژه انتخاب کنید.
+
+4. اجرای پروژه Laravel:
+   - به پوشه پروژه خود بروید:
+     ```
+     cd project-name
+     ```
+   - برای اجرای پروژه، از دستور زیر استفاده کنید:
+     ```
+     php artisan serve
+     ```
+
+بعد از اجرای این دستور، سرور توسعه Laravel روی پورت 8000 راه اندازی می شود و می توانید پروژه Laravel خود را در مرورگر با استفاده از آدرس `http://localhost:8000` مشاهده کنید.
+
+با اجرای این مراحل، شما Laravel 10 را با استفاده از ZAMPP در Ubuntu نصب کرده و یک پروژه جدید ایجاد کرده اید.
