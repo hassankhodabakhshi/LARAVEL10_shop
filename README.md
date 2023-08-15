@@ -1,6 +1,5 @@
 1. **You**: Step-by-step tutorial on how to install Laravel 10 using xampp and Ubuntu
-2. **You**: Step-by-step tutorial on how to install Laravel 10 using xampp and Ubuntu
-3. **ChatGPT**: Sure! Here's a step-by-step tutorial on how to install Laravel 10 using XAMPP and Ubuntu:
+2. **ChatGPT**: Sure! Here's a step-by-step tutorial on how to install Laravel 10 using XAMPP and Ubuntu:
 
 Step 1: Install XAMPP
 - Download XAMPP for Linux from the Apache Friends website (https://www.apachefriends.org/index.html).
