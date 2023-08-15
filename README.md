@@ -80,50 +80,59 @@ Step 6: Run Laravel
 That's it! You have successfully installed Laravel 10 using XAMPP and Ubuntu. You can now start building your Laravel application.
 
 
-1.  آموزش قدم به قدم نصب لاراول ۱۰ با استفاده از زمپ در اوبنتو
-2. نصب Laravel 10 با استفاده از ZAMPP در Ubuntu را می توان در چند مرحله جداگانه انجام داد. دقت داشته باشید که ZAMPP یک نرم افزار برای اجرای سرور وب است که شامل Apache، MySQL و PHP است.
+1.  آموزش قدم به قدم نصب لاراول ۱۰ با استفاده از نرم افزار xampp in ubuntu
+2.  نصب Laravel 10 را در Ubuntu با استفاده از نرم افزار XAMPP می‌توان به سادگی انجام داد. در ادامه، شما را قدم به قدم از نصب XAMPP تا ایجاد یک پروژه Laravel همراهی می‌کنم:
 
-1. نصب ZAMPP:
-   - ابتدا باید ZAMPP را از وبسایت رسمی Apache Friends دریافت کنید.
-   - فایل دانلود شده را با استفاده از دستور زیر در محل دلخواه خود استخراج کنید:
-     ```
-     tar xvfz xampp-linux-x64-7.4.23-0-installer.run.tar.gz -C /opt
-     ```
-   - سپس به پوشه نصب ZAMPP بروید:
-     ```
-     cd /opt/lampp
-     ```
-   - برای اجرای ZAMPP، دستور زیر را وارد کنید:
-     ```
-     sudo ./xampp start
-     ```
+1. نصب XAMPP:
+   - دستورات زیر را در ترمینال اجرا کنید تا بسته XAMPP را دانلود کنید:
+    ```
+    wget https://www.apachefriends.org/xampp-files/7.4.21/xampp-linux-x64-7.4.21-1-installer.run
+    ```
+   - سپس به بسته اجرایی دسترسی اجرا بدهید:
+    ```
+    chmod +x xampp-linux-x64-7.4.21-1-installer.run
+    ```
+   - در نهایت، بسته را نصب کنید:
+    ```
+    sudo ./xampp-linux-x64-7.4.21-1-installer.run
+    ```
+   - دستوراتی که می‌بینید را در طول نصب دنبال کنید و XAMPP را در مسیر پیش‌فرض نصب کنید.
 
-2. نصب Composer:
-   - برای نصب پکیج ها و وابستگی های Laravel، نیاز به نصب Composer داریم.
-   - برای نصب Composer، دستورات زیر را به ترتیب اجرا کنید:
-     ```
-     cd ~
-     curl -sS https://getcomposer.org/installer -o composer-setup.php
-     sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-     ```
+2. راه‌اندازی XAMPP:
+   - با اجرای دستور زیر، پنل کنترل XAMPP را باز کنید:
+    ```
+    sudo /opt/lampp/manager-linux-x64.run
+    ```
+   - در پنل کنترل، آپاچی و مای‌اس‌کیو‌ال را فعال کنید و سرویس‌ها را راه اندازی کنید.
 
-3. ساخت پروژه Laravel:
-   - برای ساخت پروژه Laravel جدید، از دستور زیر استفاده می کنیم:
-     ```
-     composer create-project --prefer-dist laravel/laravel project-name
-     ```
-     در این دستور، `project-name` نام پروژه مورد نظر شما است. می توانید هر نامی را برای پروژه انتخاب کنید.
+3. نصب Composer:
+   - دستورات زیر را در ترمینال اجرا کنید تا Composer را دانلود و نصب کنید:
+    ```
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
+    ```
+   - سپس Composer را به مسیر پیش‌فرض نصب کنید:
+    ```
+    sudo mv composer.phar /usr/local/bin/composer
+    ```
 
-4. اجرای پروژه Laravel:
-   - به پوشه پروژه خود بروید:
-     ```
-     cd project-name
-     ```
-   - برای اجرای پروژه، از دستور زیر استفاده کنید:
-     ```
-     php artisan serve
-     ```
+4. ایجاد یک پروژه Laravel:
+   - در ترمینال، دستور زیر را اجرا کنید تا پروژه Laravel جدیدی را ایجاد کنید:
+    ```
+    composer create-project --prefer-dist laravel/laravel myproject
+    ```
+   - پروژه Laravel جدید حالا در پوشه myproject ایجاد شده است.
 
-بعد از اجرای این دستور، سرور توسعه Laravel روی پورت 8000 راه اندازی می شود و می توانید پروژه Laravel خود را در مرورگر با استفاده از آدرس `http://localhost:8000` مشاهده کنید.
+5. اجرای پروژه Laravel:
+   - با دستور زیر، به پوشه پروژه بروید:
+    ```
+    cd myproject
+    ```
+   - برای اجرای پروژه، سرویس‌های Apache و MySQL را اجرا کنید:
+    ```
+    sudo /opt/lampp/lampp start
+    ```
+   - سپس در مرورگر وب، به آدرس `http://localhost/myproject/public` بروید و صفحه خوش‌آمدگویی Laravel را ببینید.
 
-با اجرای این مراحل، شما Laravel 10 را با استفاده از ZAMPP در Ubuntu نصب کرده و یک پروژه جدید ایجاد کرده اید.
+به این ترتیب، شما Laravel 10 را در Ubuntu با استفاده از XAMPP نصب کردید و پروژه‌ای را ایجاد و اجرا کردید. اکنون می‌توانید با پروژه خود کار کنید و برنامه‌های Laravel خود را توسعه دهید.
